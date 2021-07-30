@@ -1,0 +1,130 @@
+@import url(https://fonts.googleapis.com/css?family=Google+Sans:400,700,i,bi);
+
+@font-face {
+  font-family: 'Helvetica';
+  src: url("./fonts/Helvetica.ttf") format(truetype);
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Helvetica';
+  src: url("./fonts/Helvetica-Bold.ttf") format(truetype);
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Helvetica';
+  src: url("./fonts/Helvetica-Oblique.ttf") format(truetype);
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Helvetica';
+  src: url("./fonts/Helvetica-BoldOblique.ttf") format(truetype);
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Times New Roman';
+  src: url("./fonts/times new roman.ttf") format(truetype);
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Times New Roman';
+  src: url("./fonts/times new roman bold.ttf") format(truetype);
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Times New Roman';
+  src: url("./fonts/times new roman italic.ttf") format(truetype);
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Times New Roman';
+  src: url("./fonts/times new roman bold italic.ttf") format(truetype);
+  font-weight: 700;
+  font-style: italic;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: none;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+button {
+  border: none;
+  background-color: white;
+  border-right: 1px solid rgb(218, 220, 224);
+}
+
+span[onclick] {
+  cursor: default;
+  text-align: left;
+}
+
+select, input[type=number] {
+  width: auto;
+}
+
+#editor {
+  width: calc(100% - 2px);
+  border: 1px solid rgb(218, 220, 224);
+  height: calc(100vh - 50px);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  border-top: none;
+}
+
+#toolbar {
+  border-top: 1px solid rgb(218, 220, 224);
+  border-bottom: 1px solid rgb(218, 220, 224);
+  cursor: default;
+}
+#save {
+  text-align: left;
+}
