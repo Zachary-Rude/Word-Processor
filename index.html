@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+    <title>Word Processor</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="save">
+      <span onclick="save('editor')">Save</span>
+    </div>
+    <div id="toolbar">
+      <button type="button" onclick="execCmd('bold')" class="tool--btn">
+        <span class="material-icons">
+          format_bold
+        </span>
+      </button>
+      <button type="button" onclick="execCmd('italic')" class="tool--btn">
+        <span class="material-icons">
+          format_italic
+        </span>
+      </button>
+      <button type="button" onclick="execCmd('underline')" class="tool--btn">
+        <span class="material-icons">
+          format_underlined
+        </span>
+      </button>
+      <button type="button" onclick="execCmd('strikeThrough')" class="tool--btn">
+        <span class="material-icons">
+          format_strikethrough
+        </span>
+      </button>
+      <button type="button" onclick="execCmd('justifyLeft')" class="tool--btn">
+        <span class="material-icons">
+          format_align_left
+        </span>
+      </button>
+      <button type="button" onclick="execCmd('justifyCenter')" class="tool--btn">
+        <span class="material-icons">
+          format_align_center
+        </span>
+      </button>
+      <button type="button" onclick="execCmd('justifyRight')" class="tool--btn">
+        <span class="material-icons">
+          format_align_right
+        </span>
+      </button>
+      <button type="button" onclick="execCmd('justifyFull')" class="tool--btn">
+        <span class="material-icons">
+          format_align_justify
+        </span>
+      </button>
+      <button type="button" onclick="execCmd('insertOrderedList')" class="tool--btn">
+        <span class="material-icons">
+          format_list_numbered
+        </span>
+      </button>
+      <button type="button" onclick="execCmd('insertUnorderedList')" class="tool--btn">
+        <span class="material-icons">
+          format_list_bulleted
+        </span>
+      </button>
+      <button type="button" onclick="execCommandWithArg('createLink', prompt('Enter a URL', 'https:\/\/'))" class="tool--btn">
+        <span class="material-icons">
+          insert_link
+        </span>
+      </button>
+      <button type="button" onclick="execCommandWithArg('insertImage', prompt('Enter the image URL', ''))" class="tool--btn">
+        <span class="material-icons">
+          image
+        </span>
+      </button>
+      <button type="button" onclick="execCmd('cut')" class="tool--btn">
+        <span class="material-icons">
+          content_cut
+        </span>
+      </button>
+      <button type="button" onclick="execCmd('copy')" class="tool--btn">
+        <span class="material-icons">
+          content_copy
+        </span>
+      </button>
+      <button type="button" onclick="execCmd('indent')" class="tool--btn">
+        <span class="material-icons">
+          format_indent_increase
+        </span>
+      </button>
+      <button type="button" onclick="execCmd('outdent')" class="tool--btn">
+        <span class="material-icons">
+          format_indent_decrease
+        </span>
+      </button>
+      <button type="button" onclick="execCmd('subscript')" class="tool--btn">
+        <span class="material-icons">
+          subscript
+        </span>
+      </button>
+      <button type="button" onclick="execCmd('superscript')" class="tool--btn">
+        <span class="material-icons">
+          superscript
+        </span>
+      </button>
+      <button type="button" onclick="execCmd('undo')" class="tool--btn">
+        <span class="material-icons">
+          undo
+        </span>
+      </button>
+      <button type="button" onclick="execCmd('redo')" class="tool--btn">
+        <span class="material-icons">
+          redo
+        </span>
+      </button>
+      <button type="button" onclick="execCmd('insertParagraph')" class="tool--btn">
+        <span class="material-icons">
+          view_headline
+        </span>
+      </button>
+      <input type="number" value="12" min="1" max="64" onchange="execCommandWithArg('fontSize', this.value + 'pt')" />
+      <select onchange="execCommandWithArg('fontName', this.value)">
+        <option value="Arial" selected>Arial</option>
+        <option value="Helvetica">Helvetica</option>
+        <option value="Times New Roman">Times New Roman</option>
+        <option value="Google Sans">Product Sans</option>
+        <option value="Comic Sans MS">Comic Sans</option>
+        <option value="Verdana">Verdana</option>
+        <option value="Courier New">Courier New</option>
+        <option value="Courier">Courier</option>
+        <option value="Georgia">Georgia</option>
+        <option value="Tahoma">Tahoma</option>
+      </select>
+      Text Color: <input type="color" onchange="execCommandWithArg('foreColor',this.value)" />
+      Highlight Color: <input type="color" onchange="execCommandWithArg('highlightColor',this.value)"/>
+    </div>
+    <div id="editor" contenteditable="true"></div>
+    <script src="script.js"></script>
+  </body>
+</html>
