@@ -1,6 +1,6 @@
 function save(element, filename = "") {
   var header =
-    "<html xmlns:o='urn:schemas-microsoft-com:office:office' xmlns:w='urn:schemas-microsoft-com:office:word' xmlns='http://www.w3.org/TR/REC-html40'><head><meta charset='UTF-8'><title>Document</title></head><body>";
+    "<html xmlns:o='urn:schemas-microsoft-com:office:office' xmlns:w='urn:schemas-microsoft-com:office:word'><head><meta charset='UTF-8'><title>Document</title></head><body>";
 
   var footer = "</body></html>";
 
@@ -43,4 +43,22 @@ function execCmd(command) {
 
 function execCommandWithArg(command, arg) {
   document.execCommand(command, false, arg);
+}
+
+function printdiv(printpage) {
+  var headstr = `<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+  </head>
+  <body>
+  `;
+  var footstr = `</body>
+</html>`;
+  var newstr = document.getElementById(printpage).innerHTML;
+  var oldstr = document.body.innerHTML;
+  document.body.innerHTML = headstr + newstr + footstr;
+  window.print();
+  document.body.innerHTML = oldstr;
+  return false;
 }
