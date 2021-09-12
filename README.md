@@ -10,14 +10,14 @@ It is licensed under the Apache license 2.0.
 
 ## __Building It__
 
-On your computer, download and install Git from [https://git-scm.com/download](https://git-scm.com/download), and then open the Terminal app on macOS, Linux, or Chrome OS, or Git Bash, WSL, Git CMD, or cmd.exe (Command Prompt/CMD) on Windows, and then enter these commands without the dollar sign or space, pressing Enter/Return after each command:
+On your computer, download and install Git from [https://git-scm.com/download](https://git-scm.com/download), and then open the Terminal app on macOS, Linux, or Chrome OS, or Git Bash, WSL, or cmd.exe (Command Prompt/CMD) on Windows, and then enter these commands without the dollar sign or space, pressing Enter/Return after each command:
 
 ```
 $ git clone https://github.com/Zachary-Rude/Word-Processor.git
 $ cd Word-Processor
 ```
 
-Or, you could not use the `cd` command, and instead open the file manager on your computer (File Explorer/Windows Explorer on Windows, and Files on most other operating systems), and then right-click (press the Ctrl key and left-click on Mac) on the `Word-Processor` folder, and then open the `index.html` file in your browser. I recommend using [Chrome](https://www.google.com/chrome/).
+Or, you could not use the `cd` command, and instead open the file manager on your computer (File Explorer/Windows Explorer on Windows, Finder on Macintosh, and Files on most other operating systems), and then right-click (press the Ctrl key and left-click on Mac) on the `Word-Processor` folder, and then open the `index.html` file in your browser. I recommend using [Chrome](https://www.google.com/chrome/).
 
 With this method of using it, you can use it offline.
 
