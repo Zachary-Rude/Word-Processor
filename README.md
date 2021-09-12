@@ -2,7 +2,7 @@
 
 This is a basic online word processor, written in HTML, CSS, and JavaScript.
 
-The icons are from [Google Fonts](https://fonts.google.com/icons/).
+The icons are from [Google Fonts](https://fonts.google.com/).
 
 It uses the JavaScript `execCommand()` function.
 
